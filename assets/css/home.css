@@ -1,0 +1,154 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+
+
+
+h1 {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 3rem;
+    color: rgb(81, 79, 79);
+}
+
+
+form {
+    width: 50%;
+    /* height:20vh; */
+    margin: 3rem auto 0 auto;
+
+
+}
+
+.todolist {
+    width: 50%;
+    margin: 6rem auto 0 auto;
+    font-size: 1.5rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flex-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.common-style {
+    margin-top: 2rem;
+}
+
+.category-text p {
+    color: white;
+    padding: 7px 10px;
+    background-color: darkslategray;
+    font-weight: bold;
+    border-radius: 2px;
+
+}
+
+label {
+    font-size: 2rem;
+}
+
+.desc-input {
+    display: block;
+    width: 100%;
+    padding: 2rem 0 2rem 1rem;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    box-shadow: 0 0 3px 0 black;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5rem;
+
+}
+
+.add-btn {
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.8rem;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    background-color: rgba(33, 33, 230, 0.902);
+}
+
+.delete-btn a{
+    text-decoration: none;
+    color:white;
+    background-color: red;
+    padding:8px 15px;
+    border-radius:2px;
+}
+
+
+
+select {
+    border: none;
+    outline: none;
+    box-shadow: 0 0 3px 0 black;
+    padding: 7px 20px;
+}
+
+.date-input {
+    border: none;
+    outline: none;
+    box-shadow: 0 0 3px 0 black;
+    padding: 7px 20px;
+
+}
+
+.date {
+    color: rgb(114, 112, 112);
+
+}
+
+
+@media (max-width:860px) {
+    .flex{
+        flex-direction: column;
+    }
+
+    select{
+        width:50%;
+        margin-top:1rem;
+        margin-bottom: 1rem;
+    }
+
+    .date-input{
+        width:50%;
+        margin-top:1rem;
+    }
+}
+
+
+@media (max-width:930px) {
+    .delete-btn{
+        margin-left: 2rem;
+    }
+
+    .category-text{
+        margin-left:2rem;
+    }
+}

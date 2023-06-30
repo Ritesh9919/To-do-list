@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= title %>
+  </title>
+  
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+
+<body>
+<!--  ===============header====================  -->
+
+  <header>
+    <h1>TODO App</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- ================Form start here =============== -->
+  <form action="/create-todolist" method="POST">
+    <label for="description">Description</label>
+    <input type="text" id="description" name="work" placeholder="what you need to do" class="desc-input" required/>
+
+    <div class="flex common-style">
+
+    <label for="category">Category</label>
+    <select id="category" name="category">
+      <option value=""></option>
+      <option value="Personal">Personal</option>
+      <option value="Work">Work</option>
+      <option value="School">School</option>
+      <option value="Cleaning">Cleaning</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="date">Due date</label>
+    <input class="date-input" type="date" id="date" name="date"/>
+    </div>
+
+    <div class="buttons">
+    <button class="add-btn" type="submit">Add</button>
+    
+
+    </div>
+
+    <!-- ======================Form end here =======================-->
+  </form>
+
+  <div class="todolist">
+    <ul>
+      <% for(let i of to_do_list) { %>
+        <li class="flex-list">
+          <div>
+          <h2><%= i.work %></h2>
+          <p class="date"><%= i.date %></p>
+          </div>
+          <div class="category-text">
+            <p><%= i.category %></p>
+          </div>
+          <div class="delete-btn">
+            <a href="/delete-task/?id=<%= i._id %>">Delete</a>
+          </div>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+
+  </div>
+
+</body>
+
+</html>

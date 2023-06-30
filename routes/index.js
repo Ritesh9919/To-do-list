@@ -1,9 +1,10 @@
 const express = require('express');
-
 const router = express.Router();
- const homeController = require('../controllers/home_controller');
- router.get('/', homeController.home);
- router.use('/users', require('./user'));
- router.use('/users', require('./user'));
+const todo = require('../controllers/todo');
+
+// routers
+router.get('/', todo.home);
+router.post('/create-todolist', todo.create);
+router.get('/delete-task', todo.delete);
 
 module.exports = router;
